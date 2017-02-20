@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/contentRegistrarVisita"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.gruporosul.vallasrosul.ui.RegistrarVisitaActivity"
+    tools:showIn="@layout/activity_registrar_visita"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="8dp">
+
+
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/txtCodigoBusqueda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text="Código: VN-VAS-80"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        tools:layout_editor_absoluteX="0dp"
+                        tools:layout_editor_absoluteY="0dp"
+                        android:layout_alignParentEnd="true" />
+
+                    <TextView
+                        android:id="@+id/txtDescripcion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VALLA METALICA 5X5"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        tools:layout_editor_absoluteX="0dp"
+                        tools:layout_editor_absoluteY="24dp"
+                        android:layout_below="@+id/txtCodigoBusqueda"
+                        android:layout_toEndOf="@+id/txtGeoPosicion" />
+
+                    <TextView
+                        android:id="@+id/txtGeoPosicion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Latitud: 14.1564 Longitud: -90.165487"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:visibility="gone"
+                        tools:layout_editor_absoluteX="0dp"
+                        tools:layout_editor_absoluteY="41dp" />
+
+                    <TextView
+                        android:id="@+id/txtEstadoContrato"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="ACTIVO"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        tools:layout_editor_absoluteX="0dp"
+                        tools:layout_editor_absoluteY="58dp"
+                        android:layout_below="@+id/txtDescripcion"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:id="@+id/txtProyecto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ENTRE VALLES"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        tools:layout_editor_absoluteX="0dp"
+                        tools:layout_editor_absoluteY="75dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toEndOf="@+id/txtGeoPosicion" />
+
+                    <com.vatsal.imagezoomer.ImageZoomButton
+                        android:id="@+id/imgValla"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        tools:layout_editor_absoluteX="168dp"
+                        tools:layout_editor_absoluteY="92dp"
+                        android:layout_below="@+id/txtProyecto"
+                        android:layout_alignParentEnd="true" />
+
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/separator"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#383838" />
+
+                <com.google.android.gms.maps.MapView
+                    android:id="@+id/mapView"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:apiKey="@string/google_maps_key"
+                    android:paddingTop="5dp"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="140dp" />
+
+                <include android:id="@+id/contentData"
+                    layout="@layout/layout_data_publicidad" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>

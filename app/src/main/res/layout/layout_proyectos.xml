@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgLogoProyecto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/ic_launcher_round"/>
+
+    <LinearLayout
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/codigoProyecto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:fontFamily="monospace"
+            android:text="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtNombreProyecto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Entre Valles"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead" />
+
+    </LinearLayout>
+
+</LinearLayout>

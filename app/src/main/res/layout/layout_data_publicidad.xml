@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:paddingTop="5dp"
+        android:id="@+id/titleListadoProblemas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Listado de problemas"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/txtObservaciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Observaciones"
+            android:inputType="textMultiLine" />
+    </android.support.design.widget.TextInputLayout>
+
+    <com.nihaskalam.progressbuttonlibrary.CircularProgressButton
+        android:id="@+id/tomarFotografia"
+        android:layout_width="196dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/text_state_selector"
+        android:textSize="16sp"
+        app:pb_colorCancelText="@color/pb_orange"
+        app:pb_colorCompleteText="@color/pb_orange"
+        app:pb_colorErrorText="@color/pb_blue"
+        app:pb_colorIndicator="@color/colorButtonCompleteState"
+        app:pb_cornerRadius="48dp"
+        app:pb_iconCancel="@drawable/ic_action_cross"
+        app:pb_iconComplete="@drawable/ic_action_accept"
+        app:pb_iconError="@drawable/ic_action_cancel"
+        app:pb_selectorCancel="@color/pb_cancel_state_selector"
+        app:pb_selectorComplete="@color/complete_state_selector"
+        app:pb_selectorError="@color/error_state_selector"
+        app:pb_selectorIdle="@color/idle_state_selector"
+        app:pb_textColorAfterClick="@color/colorWhite"
+        app:pb_textIdle="@string/btn_tomar_fotografia"
+        android:paddingBottom="8dp"/>
+
+
+    <com.nihaskalam.progressbuttonlibrary.CircularProgressButton
+        android:id="@+id/enviarVisita"
+        android:layout_width="196dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/text_state_selector"
+        android:textSize="20sp"
+        app:pb_colorCancelText="@color/pb_orange"
+        app:pb_colorCompleteText="@color/pb_orange"
+        app:pb_colorErrorText="@color/pb_blue"
+        app:pb_colorIndicator="@color/colorButtonCompleteState"
+        app:pb_cornerRadius="48dp"
+        app:pb_iconCancel="@drawable/ic_action_cross"
+        app:pb_iconComplete="@drawable/ic_action_accept"
+        app:pb_iconError="@drawable/ic_action_cancel"
+        app:pb_selectorCancel="@color/pb_cancel_state_selector"
+        app:pb_selectorComplete="@color/complete_state_selector"
+        app:pb_selectorError="@color/error_state_selector"
+        app:pb_selectorIdle="@color/idle_state_selector"
+        app:pb_textColorAfterClick="@color/colorWhite"
+        app:pb_textIdle="@string/submit"
+        android:paddingBottom="8dp"/>
+
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txtCodPublicidad"
+        android:text="5"
+        android:textStyle="bold"
+        android:paddingTop="@dimen/activity_horizontal_margin"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtDescripcion"
+            android:text="Valla metalica 5x5"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txtLatLong"
+            android:text="Lat: 14.12315 \t Long: -90.456"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txtEstado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textStyle="bold"
+            android:text="ACTIVO"/>
+
+
+        <!--View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#373737" /-->
+
+    </LinearLayout>
+
+</LinearLayout>

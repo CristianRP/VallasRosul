@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.gruporosul.vallasrosul.ui.NuevaVallaActivity"
+    tools:showIn="@layout/activity_nueva_valla"
+    android:padding="@dimen/activity_horizontal_margin">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    app:srcCompat="@drawable/ic_descripcion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/etCodigoBusqueda"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:singleLine="true"
+                        android:maxLines="2"
+                        android:imeOptions="actionNext"
+                        android:hint="Código de busqueda" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    app:srcCompat="@drawable/ic_descripcion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/etDescripcion"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:singleLine="true"
+                        android:maxLines="2"
+                        android:imeOptions="actionNext"
+                        android:hint="@string/descripcion_text" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/ic_latlong" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/edLatLng"
+                            android:enabled="false"
+                            android:imeOptions="actionNext"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/lat_long_hint" />
+
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <com.nihaskalam.progressbuttonlibrary.CircularProgressButton
+                    android:id="@+id/btnObtenerUbicacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:textColor="@color/text_state_selector"
+                    android:paddingEnd="5dp"
+                    android:textSize="12sp"
+                    app:pb_colorCancelText="@color/pb_orange"
+                    app:pb_colorCompleteText="@color/pb_orange"
+                    app:pb_colorErrorText="@color/pb_blue"
+                    app:pb_colorIndicator="@color/colorButtonCompleteState"
+                    app:pb_cornerRadius="48dp"
+                    app:pb_iconCancel="@drawable/ic_action_cross"
+                    app:pb_iconComplete="@drawable/ic_action_accept"
+                    app:pb_iconError="@drawable/ic_action_cancel"
+                    app:pb_selectorCancel="@color/pb_cancel_state_selector"
+                    app:pb_selectorComplete="@color/complete_state_selector"
+                    app:pb_selectorError="@color/error_state_selector"
+                    app:pb_selectorIdle="@color/idle_state_selector"
+                    app:pb_textColorAfterClick="@color/colorWhite"
+                    app:pb_textIdle="@string/btn_obtener_ubicacion"
+                    android:paddingBottom="8dp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingTop="16dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    app:srcCompat="@drawable/ic_proyecto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+
+                <Spinner
+                    android:id="@+id/spinnerProyectos"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    app:srcCompat="@drawable/ic_anchoalto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/edAlto"
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:hint="@string/alto_hint"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/edAncho"
+                        android:hint="@string/ancho_hint"
+                        android:layout_width="70dp"
+                        android:inputType="number"
+                        android:imeOptions="actionNext"
+                        android:layout_height="match_parent" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_direccion"
+                    android:layout_gravity="center"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/edDireccion"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/direccion_hint"
+                        android:imeOptions="actionNext"
+                        android:maxLines="3"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        app:srcCompat="@drawable/ic_imagen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"/>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/edFoto"
+                            android:text="FOTO"
+                            android:enabled="false"
+                            android:imeOptions="actionNext"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <com.nihaskalam.progressbuttonlibrary.CircularProgressButton
+                    android:id="@+id/btnTomarFoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_state_selector"
+                    app:pb_colorCancelText="@color/pb_orange"
+                    app:pb_colorCompleteText="@color/pb_orange"
+                    app:pb_colorErrorText="@color/pb_blue"
+                    app:pb_colorIndicator="@color/colorButtonCompleteState"
+                    app:pb_cornerRadius="48dp"
+                    app:pb_iconCancel="@drawable/ic_action_cross"
+                    app:pb_iconComplete="@drawable/ic_action_accept"
+                    app:pb_iconError="@drawable/ic_action_cancel"
+                    app:pb_selectorCancel="@color/pb_cancel_state_selector"
+                    app:pb_selectorComplete="@color/complete_state_selector"
+                    app:pb_selectorError="@color/error_state_selector"
+                    app:pb_selectorIdle="@color/idle_state_selector"
+                    app:pb_textColorAfterClick="@color/colorWhite"
+                    app:pb_textIdle="@string/btn_tomar_fotografia"
+                    android:paddingBottom="8dp"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <ImageView
+                    app:srcCompat="@drawable/ic_demo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:text="@string/demo_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ToggleButton
+                    android:id="@+id/toggleDemo"
+                    android:background="@drawable/select_button"
+                    android:layout_marginLeft="10dp"
+                    android:textOff="No"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingTop="16dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    app:srcCompat="@drawable/ic_proyecto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+
+                <Spinner
+                    android:id="@+id/spinnerPeriodo"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingTop="16dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    app:srcCompat="@drawable/ic_proyecto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+
+                <Spinner
+                    android:id="@+id/spinnerZona"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.nihaskalam.progressbuttonlibrary.CircularProgressButton
+                    android:id="@+id/enviarNuevaValla"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/text_state_selector"
+                    android:textSize="22sp"
+                    app:pb_colorCancelText="@color/pb_orange"
+                    app:pb_colorCompleteText="@color/pb_orange"
+                    app:pb_colorErrorText="@color/pb_blue"
+                    app:pb_colorIndicator="@color/colorButtonCompleteState"
+                    app:pb_cornerRadius="48dp"
+                    app:pb_iconCancel="@drawable/ic_action_cross"
+                    app:pb_iconComplete="@drawable/ic_action_accept"
+                    app:pb_iconError="@drawable/ic_action_cancel"
+                    app:pb_selectorCancel="@color/pb_cancel_state_selector"
+                    app:pb_selectorComplete="@color/complete_state_selector"
+                    app:pb_selectorError="@color/error_state_selector"
+                    app:pb_selectorIdle="@color/idle_state_selector"
+                    app:pb_textColorAfterClick="@color/colorWhite"
+                    app:pb_textIdle="Crear valla"
+                    android:paddingBottom="8dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

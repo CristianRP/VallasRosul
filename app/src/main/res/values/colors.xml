@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#679C3E</color>
+    <color name="colorPrimaryDark">#1B1B1B</color>
+    <color name="colorAccent">#abf563</color>
+    <color name="status_default">#ae332a</color>
+
+    <color name="colorButtonCompleteState">#19CC95</color>
+    <color name="colorProgressIndicatorBackground">#bbbbbb</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorStroke">#19CC95</color>
+    <color name="colorRed">#ffcd0a51</color>
+</resources>

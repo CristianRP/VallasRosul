@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">"Vallas Rosul "</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Strings activity login -->
+    <string name="title_activity_login">Inicio de Sesión</string>
+    <string name="prompt_user">Usuario</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="btn_sign_in">Iniciar Sesión</string>
+    <string name="error_user_field_required">El usuario es requerido</string>
+    <string name="error_password_field_required">La contraseña es requerida</string>
+    <string name="content_login">
+        <![CDATA[
+            <b>Bienvenido,</b> \n <br/>
+            para usar la apliación debes iniciar sesión.
+        ]]>
+    </string>
+    <string name="login_error">Revisa tus datos.</string>
+    <string name="action_loading">Cargando&#8230;</string>
+    <string name="log_out_item">Cerrar Sesión</string>
+    <string name="title_activity_proyectos">ProyectosActivity</string>
+    <string name="title_activity_publicidad">PublicidadActivity</string>
+    <string name="title_activity_detalle_publicidad">DetallePublicidadActivity</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="submit">Reportar visita</string>
+    <string name="btn_tomar_fotografia">@string/dialog_title_foto</string>
+    <string name="dialog_content_reportar_visita">¿Quieres registarar la visita?</string>
+    <string name="dialog_title_reportar_visita">Registrar visita</string>
+    <string name="dialog_positive">Registrar</string>
+    <string name="dialog_negative">Cancelar</string>
+    <string name="dialog_content_foto">¿Quieres tomar la fotografía?</string>
+    <string name="dialog_title_foto">Tomar fotografía</string>
+    <string name="dialog_positive_foto">Tomar</string>
+    <string name="title_activity_contratos">Contratos</string>
+
+    <string name="op_contrato_ver">Ver vallas</string>
+    <string name="op_contrato_crear">Crear una valla</string>
+    <string name="btn_contrato_ok">Aceptar</string>
+    <string-array name="opciones_contrato">
+        <item>@string/op_contrato_ver</item>
+        <item>@string/op_contrato_crear</item>
+    </string-array>
+    <string name="title_activity_nueva_valla">Crear valla</string>
+    <string name="descripcion_text">Descripción</string>
+    <string name="lat_long_hint">Latitud y Longitud</string>
+    <string name="ancho_hint">Ancho</string>
+    <string name="alto_hint">Alto</string>
+    <string name="direccion_hint">Dirección</string>
+    <string name="demo_text">Demostración?</string>
+    <string name="btn_obtener_ubicacion">Obtener Ubicación</string>
+    <string name="title_activity_main">Menú Principal</string>
+    <string name="title_activity_tareas">Listado de tareas</string>
+    <string name="title_activity_registrar_visita">Registrar Visita</string>
+
+</resources>
